@@ -174,97 +174,77 @@
         <section class = "content-header">
             <div class="col-lg-12">
                 <!-- general form elements -->
-                <div class="box box-primary">
+              <div class="box box-primary">
                   <div class="box-header with-border">
                     <h3 class="box-title">Contact Me</h3>
                   </div>
                   <!-- /.box-header -->
                   <!-- form start -->
-                  <form role="form">
+              <form role="form">
+                <div class = "card-body">
+                  <form action="">
                     <div class="box-body">
+		                  
                       <div class="form-group">
-                        <label for="exampleInputEmail1">First Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Name">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword1">Last Name</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Your Last Name">
+                        <label for="exampleInputText1">First Name</label>
+                        <input type="text" class="form-control" id="Name" placeholder="Your Name :">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputPassword1">Subject</label>
-                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Write Something...">
+                        <label for="exampleInputText2">Last Name</label>
+                        <input type="text" class="form-control" id="Surname" placeholder="Your SurName :">
                       </div>
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> You are not a robot.
-                        </label>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="Email" placeholder="Your Email :">
                       </div>
-                    </div>
-                    <!-- /.box-body -->
-      
-                    <div class="box-footer">
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                  </form>
-                </div>
-              </div> 
-            <div class = "col-lg-12">
-              <div class="box box-info">
-                <div class="box-header ui-sortable-handle" style="cursor: move;">
-                  <i class="fa fa-envelope"></i>
-                  <h3 class="box-title">Sent email to me</h3>
-                  <!-- tools box -->
-                  <div class="pull-right box-tools">
-                    <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
-                      <i class="fa fa-times"></i></button>
+                      <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" rows="3" id="Des" placeholder="What do you want to tell me ?" spellcheck="false"></textarea>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="">Gender</label><br>
+                            <input type="radio" name="gender" id="Radios1" value="1" checked> Male
+                            <input type="radio" name="gender" id="Radios2" value="2" > Female
+                            <input type="radio" name="gender" id="Radios3" value="3" > Other
+                      </div>
+                     </div>
+                    </form>
                   </div>
-                  <!-- /. tools -->
                 </div>
-                <div class="box-body">
-                  <form action="#" method="post">
-                    <div class="form-group">
-                      <input type="email" class="form-control" name="emailto" placeholder="Email to:">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="subject" placeholder="What do you want to tell...">
-                    </div>
-                    <div>
-      <div class="bootstrap-wysihtml5-insert-link-modal modal fade" data-wysihtml5-dialog="createLink">
-        <div class="modal-dialog ">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a class="close" data-dismiss="modal">×</a>
-              <h3>Insert link</h3>
-            </div>
-            <div class="modal-body">
-              <div class="form-group">
-                <input value="http://" class="bootstrap-wysihtml5-insert-link-url form-control" data-wysihtml5-dialog-field="href">
-              </div> 
-              <div class="checkbox">
-                <label> 
-                  <input type="checkbox" class="bootstrap-wysihtml5-insert-link-target" checked="">Open link in new window
-                </label>
+                <div class="box-footer">
+                  <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                  <button type="reset" class="btn btn-ptimary" id="reset" value="Reset">Reset</button>
+                </div>
+               </form>
               </div>
-            </div>
-            <div class="modal-footer">
-              <a class="btn btn-default" data-dismiss="modal" data-wysihtml5-dialog-action="cancel" href="#">Cancel</a>
-              <a href="#" class="btn btn-primary" data-dismiss="modal" data-wysihtml5-dialog-action="save">Insert link</a>
+              <div class="row">
+                <div class="col-lg-12">
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">
+                      <h3 class="card-title">User Information</h3>
+                    </div>
+                <table class="table text text-white">
+                      <thead>
+                        <tr role="row">
+                          <th>Name</th>
+                          <th>Gender</th>
+                          <th>Email</th>
+                        </tr>
+                      </thead>
+  
+                      <tbody>
+                      
+                      </tbody>
+                </table>
+                </div>
+              </div>
+              </div>
+              <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+
             </div>
           </div>
-        </div>
-      </div>
-
-                    </div>
-                  </form>
-                </div>
-                <div class="box-footer clearfix">
-                  <button type="button" class="pull-right btn btn-default" id="sendEmail">Send
-                    <i class="fa fa-arrow-circle-right"></i></button>
-                </div>
-              </div>
-            </div>            
-            </section>
-
+        </section>
       </div>
       <!-- /.content-wrapper -->
     
@@ -480,6 +460,18 @@ integrity="sha256-GqCMs8eqcNJo0k1Zw3TBSve9COCvjIX45PYKJlH0urU=" crossorigin="ano
 
 <!-- AdminLTE App -->
 <script src="./dist/js/adminlte.min.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+
+<script src="./dist/js/contact.js"></script>
+
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
     
 </body>
